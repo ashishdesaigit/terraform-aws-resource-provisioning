@@ -20,7 +20,7 @@ resource "aws_iam_role" "iam_for_lambda" {
             "Statement" : [
             {
                 "Action" : "sts:AssumeRole",
-                "Principle" : {
+                "Principal" : {
                     "Service" : "lambda.amazonaws.com"
                 },
                 "Effect" : "Allow",
