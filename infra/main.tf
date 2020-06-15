@@ -14,7 +14,7 @@ terraform {
 
 resource "aws_iam_role" "iam_for_lambda" {
     name = "iam_for_lambda"
-    assume_role_polict = <<EOF
+    assume_role_policy = <<EOF
         {
             "Version" : "2017-10-17",
             "Statement" : [
@@ -38,5 +38,6 @@ resource "aws_lambda_function" "foo_function" {
     s3_key          = "foo_function.zip"
     handler         = "index.handler"
     runtime         = "nodejs12.x"
-    role            = "${aws_iam_role.iam_for_lambda.arn}"
+    role            = aws_iam_role.iam_for_lambda.arn
+
 }
