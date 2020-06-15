@@ -31,6 +31,7 @@ resource "aws_iam_role" "iam_for_lambda" {
     EOF
 }
 
+
 resource "aws_lambda_function" "foo_function" {
     function_name   = "foo_function"
     s3_bucket       = "foo_function_archieve"
