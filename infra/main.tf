@@ -34,8 +34,8 @@ EOF
 
 resource "aws_lambda_function" "foo_function" {
     function_name   = "foo_function"
-    s3_bucket       = "foo_function_archieve"
-    s3_key          = "foo_function.zip"
+    s3_bucket       = "foo-function-archieve"
+    s3_key          = "foo.zip"
     handler         = "index.handler"
     runtime         = "nodejs12.x"
     role            = aws_iam_role.iam_for_lambda.arn
