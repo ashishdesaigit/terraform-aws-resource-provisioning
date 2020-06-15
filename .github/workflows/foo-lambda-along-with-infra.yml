@@ -31,8 +31,6 @@ jobs:
       #Copy zipped function to s3
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --acl public-read --delete
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_LAMBDA_BUCKET_NAME }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
