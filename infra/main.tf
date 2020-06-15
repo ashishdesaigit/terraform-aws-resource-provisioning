@@ -13,7 +13,7 @@ terraform {
 
 
 resource "aws_iam_role" "iam_for_lambda" {
-    name = "iam_for_lambda",
+    name = "iam_for_lambda"
     assume_role_polict = <<EOF
         {
             "Version" : "2017-10-17",
