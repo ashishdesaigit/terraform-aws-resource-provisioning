@@ -25,6 +25,7 @@ jobs:
       - name: Zip Foo
         working-directory: ./foo
         run: |
+          mkdir ./../build
           zip -r ../build/foo.zip .
       
       #Copy zipped function to s3
