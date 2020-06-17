@@ -9,7 +9,9 @@ Terraform provisions following
 4.  aws lambda functions
 
 Refer `infra/main.tf` file for details.
-Please not that `backend` is configured remotely with `s3`
+Please note that `backend` is configured remotely with `s3`
+Along with that terraform will assume the s3 bucket for backend state management is already created.
+Also the aws lambda artefacts bucket.
 
 ### Provisioning
 You can provision multiple environments. For now here 2 environments are provisioned.
