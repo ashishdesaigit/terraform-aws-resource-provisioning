@@ -11,7 +11,7 @@ Terraform provisions following
 Refer `infra/main.tf` file for details.
 Please not that `backend` is configured remotely with `s3`
 
-####Provisioning
+###Provisioning
 You can provision multiple environments. For now here 2 environments are provisioned.
 `terraform workspace` commands will come handy
 
@@ -46,7 +46,7 @@ terraform workspace new qa || terraform workspace select qa
 ```
 
 
-####Environment Variables per workspace
+###Environment Variables per workspace
 `infra/parameters.tf` has all the env variables. For example database names etc.
 
 
